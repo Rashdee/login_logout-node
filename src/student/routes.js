@@ -14,6 +14,7 @@ studentRouter.post("/createStudent", createStudent);
 
 studentRouter.get("/getStudents", jwtAuthMiddleware, getStudents);
 
+//its for chech which user is login?
 studentRouter.get("/profile", jwtAuthMiddleware, async (req, resp) => {
   try {
     const studentData = req.user.userData;
